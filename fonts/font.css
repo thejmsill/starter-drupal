@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Brauer Neue';
+  src: url('BraueNeue-Black.eot'); /* IE9 Compat Modes */
+  src: url('BraueNeue-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('BraueNeue-Black.woff') format('woff'), /* Modern Browsers */
+       url('BraueNeue-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('BraueNeue-Black.svg#d7c0d88bf937888986e8ee1e54e1c652') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Brauer Neue';
+  src: url('BraueNeue-Regular.eot'); /* IE9 Compat Modes */
+  src: url('BraueNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('BraueNeue-Regular.woff') format('woff'), /* Modern Browsers */
+       url('BraueNeue-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('BraueNeue-Regular.svg#445c0c1334d7ba4f776377a537e2509e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

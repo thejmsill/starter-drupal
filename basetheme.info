@@ -1,0 +1,22 @@
+name = 'BASE Theme'
+description = 'Base Theme by Sill Media Inc.'
+core = '7.x'
+version = '1.0'
+engine = 'phptemplate'
+screenshot = 'screenshot.png'
+
+regions[header] = 'Header'
+regions[content] = 'Content'
+regions[sidebar] = 'Sidebar'
+;regions[undercontent] = 'Under Content'
+regions[footer] = 'Footer'
+
+stylesheets[all][] = css/styles.css
+stylesheets[print][] = css/print.css
+
+; === Plugins ===
+
+
+; === Theme JS ===
+scripts[] = 'js/site-functions.js'
+

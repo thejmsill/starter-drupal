@@ -1,0 +1,63 @@
+@mixin nav-button {
+  @include border-radius(3px);
+  text-transform: uppercase;
+  color: $white;
+  background-color: $darkgrey;
+  text-decoration: none;
+  border: none;
+  font-size: 17px;
+  &:hover{
+    background-color: $black;
+  }
+}
+
+@mixin ua-button($colour) {
+  @include border-radius(3px);
+  color: $white;
+  background-color: $colour;
+  text-decoration: none;
+  border: none;
+  &:active{
+    background-color: darken($colour, 15%);
+  }
+  &:hover{
+    background-color: lighten($colour, 15%);
+  }
+}
+
+@mixin button-colour($colour) {
+  $base-shadow: darken($colour, 15%);
+  @include single-box-shadow(0px, 2px, 0px, 0px, $base-shadow);
+  background-color: $colour;
+  &:hover{
+    background-color: lighten($colour, 15%);
+    @include single-box-shadow(0px, 2px, 0px, 0px, $colour);
+  }
+  &:active{
+    background-color: $base-shadow;
+    @include single-box-shadow(0px, -2px, 0px, 0px, darken($base-shadow, 15%));
+  }
+}
+
+@mixin pager-button{
+  background-color: $darkgrey;
+  @include border-radius(3px);
+  text-transform: uppercase;
+  color: $white;
+  text-decoration: none;
+  border: none;
+  font-size: $small-font-size;
+  margin: 0;
+  padding: 0.2em 0.5em;
+
+  &.pager-current,
+  &:hover{
+    background-color: $black;
+    font-weight: normal;
+  }
+
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+}

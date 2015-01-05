@@ -1,0 +1,15 @@
+// Main container
+.l-container{
+  .l-inner-container{
+    max-width: 1240px;
+    padding: 0 10px;
+    margin: 0 auto;
+    @include clearfix;
+
+    @include breakpoint(360px){
+      padding: 0 20px;
+    }
+  }
+  clear: both;
+}
+

@@ -1,0 +1,220 @@
+#site-header{
+  width: 100%;
+  color: $white;
+  background-color: $bkg-black;
+  z-index: 100;
+  @include single-transition(top, 0.2s, ease-in-out);
+
+  //sticky header
+  body.fixed-nav & {
+    position:fixed;
+  }
+
+  .block-menu {
+    clear:both;
+    margin: 0 0 16px 46px;
+    @include transition(all, 0.2s, ease-in-out);
+
+    @include breakpoint(max-width 500px){
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+
+    @include breakpoint(760px){
+      clear:none;
+      float: right;
+      margin: 5px 160px 0 0;
+      display: block;
+    }
+
+  }
+
+
+  .menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    letter-spacing: 0.1em;
+    li{
+      list-style-image: none;
+      list-style-type: none;
+      margin:0;
+      padding:0;
+      line-height: 28px;
+      @include breakpoint(500px){
+        display: inline;
+        line-height: 55px;
+        margin:0 0 0 8px;
+      }
+
+      a{
+        padding: 5px;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight:100;
+
+        @include breakpoint(500px){
+          @include border-radius(3px);
+          border: 1px solid transparent;
+          &:hover,
+          &.active,
+          &.active-trail{
+            border: 1px solid $white;
+            color: $white !important;
+          }
+        }
+
+
+      }
+
+      &.events {
+        a:hover,
+        a.active,
+        a.active-trail{
+          border-color: $cyan;
+          color: $cyan;
+        }
+      }
+
+      &.journal {
+        a:hover,
+        a.active,
+        a.active-trail{
+          border-color: $orange;
+          color: $orange;
+        }
+      }
+      &.about {
+        a:hover,
+        a.active,
+        a.active-trail{
+          border-color: $green;
+          color: $green;
+        }
+      }
+      &.contribute {
+        a:hover,
+        a.active,
+        a.active-trail{
+          border-color: $rose;
+          color: $rose;
+        }
+      }
+
+      >ul{
+        display: none;
+      }
+    }
+  }
+
+  .block-search {
+    position:absolute;
+    right:40px;
+    top:5px;
+
+    @include breakpoint(500px){
+      right:10px;
+    }
+
+    form{
+      border: 1px solid transparent;
+      padding-top: 8px;
+      height: 32px;
+      &:hover,
+      &.active{
+        border-bottom-color: $white;
+        input[type="text"] {
+          visibility: visible;
+        }
+      }
+
+      input[type="text"]{
+        width: 50px;
+        border: none;
+        //background-color: $bkg-black;
+        outline: none;
+        visibility: none;
+        @include breakpoint(360px){
+          width: 90px;
+        }
+        @include breakpoint(480px){
+          width: 130px;
+        }
+      }
+      input[type="submit"]{
+        @include single-text-shadow(0,0,0,0, transparent);
+        @include single-box-shadow(0,0,0,0, transparent);
+        color: $white;
+        //background: url("../images/search.png") no-repeat center center transparent;
+        border: none;
+        width: 30px;
+        font-family: FontAwesome;
+        background-color: transparent;
+      }
+    }
+    .contextual-links-wrapper{
+      display: none;
+    }
+
+  }
+
+}
+
+.menu-container {
+  position:relative;
+}
+
+.logo{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  background: url("../images/ua-logo.svg") no-repeat 0 center;
+  padding-left: 60px;
+  line-height: 65px;
+  display: block;
+  float: left;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.site-name{
+
+}
+
+.site-slogan {
+  display: none;
+  overflow: hidden;
+  border-left: 1px solid $white;
+  padding-left: 10px;
+  margin-left: 10px;
+
+  @include breakpoint(530px 759px){
+    display: inline;
+  }
+  @include breakpoint(760px 910px){
+    display: none;
+  }
+  @include breakpoint(911px){
+    display: inline;
+  }
+}
+
+i.hamburger {
+  position:absolute;
+  top:13px;
+  right:0px;
+  cursor: pointer;
+  font-size: 19px;
+  padding:10px;
+  @include breakpoint(500px){
+    display: none;
+  }
+}
